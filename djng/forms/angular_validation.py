@@ -1,6 +1,6 @@
 from django.forms import widgets
 from django.utils.html import format_html
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str as force_text
 from .angular_base import NgFormBaseMixin, SafeTuple
 
 
