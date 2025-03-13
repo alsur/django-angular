@@ -7,7 +7,11 @@ from django.forms import forms
 from django.forms.boundfield import BoundField
 from django.http import QueryDict
 from django.utils.html import format_html, format_html_join, escape, conditional_escape
-from django.utils.encoding import force_text
+try:
+    from django.utils.encoding import force_text
+except ImportError:
+    from django.utils.encoding import force_str as force_text
+from django.utils.encoding import force_str
 from django.utils.module_loading import import_string
 from django.utils.safestring import mark_safe, SafeText, SafeData
 from django.core.exceptions import ValidationError, ImproperlyConfigured
